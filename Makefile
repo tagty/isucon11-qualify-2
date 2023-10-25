@@ -10,7 +10,7 @@ build:
 	ssh isucon11-qualify-1 " \
 		cd /home/isucon/webapp/go; \
 		/home/isucon/local/go/bin/go build -o isucondition main.go; \
-		sudo systemctl restart isucondition.go"
+		sudo systemctl restart isucondition.go.service"
 
 mariadb-deploy:
 	ssh isucon11-qualify-1 "sudo dd of=/etc/mysql/mariadb.conf.d/50-server.cnf" < ./etc/mysql/mariadb.conf.d/50-server.cnf
