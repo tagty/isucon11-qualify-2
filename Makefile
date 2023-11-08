@@ -13,13 +13,13 @@ build:
 		sudo systemctl restart isucondition.go.service"
 
 mariadb-deploy:
-	ssh isucon11-qualify-1 "sudo dd of=/etc/mysql/mariadb.conf.d/50-server.cnf" < ./etc/mysql/mariadb.conf.d/50-server.cnf
+	ssh isucon11-qualify-2 "sudo dd of=/etc/mysql/mariadb.conf.d/50-server.cnf" < ./etc/mysql/mariadb.conf.d/50-server.cnf
 
 mariadb-rotate:
-	ssh isucon11-qualify-1 "sudo rm -f /var/log/mysql/mariadb-slow.log"
+	ssh isucon11-qualify-2 "sudo rm -f /var/log/mysql/mariadb-slow.log"
 
 mariadb-restart:
-	ssh isucon11-qualify-1 "sudo systemctl restart mariadb.service"
+	ssh isucon11-qualify-2 "sudo systemctl restart mariadb.service"
 
 nginx-deploy:
 	ssh isucon11-qualify-1 "sudo dd of=/etc/nginx/nginx.conf" < ./etc/nginx/nginx.conf
