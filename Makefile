@@ -41,7 +41,7 @@ bench:
 		./bench -all-addresses 127.0.0.11 -target 127.0.0.11:443 -tls -jia-service-url http://127.0.0.1:4999"
 
 pt-query-digest:
-	ssh isucon11-qualify-1 "sudo pt-query-digest --limit 10 /var/log/mysql/mariadb-slow.log"
+	ssh isucon11-qualify-2 "sudo pt-query-digest --limit 10 /var/log/mysql/mariadb-slow.log"
 
 ALPSORT=sum
 ALPM="/api/isu/.+/icon,/api/isu/.+/graph,/api/isu/.+/condition,/api/isu/[-a-z0-9]+,/api/condition/[-a-z0-9]+,/api/catalog/.+,/api/condition\?,/isu/........-....-.+,/?jwt=.+"
